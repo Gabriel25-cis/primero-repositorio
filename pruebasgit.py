@@ -12,17 +12,21 @@ num_estudiantes = int(input('Cuantos estudiantes agregaras: '))
 num_calificaciones = 3
 
 def agregaralumnos():
+
     for i in range(num_estudiantes):
-        n = 1
         nombre = input('\nIngrese el nombre del estudiante: ')
-        edad = input('Ingrese la edad del estudiante: ')
+        edad = int(input('Ingrese la edad del estudiante: '))
         calificaciones = []
 
-        for i in range (num_calificaciones):
-            calificacion = float(input(f'Ingrese la calificacion del estudiante:{n}- '))
+        for j in range (num_calificaciones):
+            calificacion = float(input(f'Ingrese la calificacion del estudiante:{j+1}- '))
             calificaciones.append(calificacion)
-            n += 1
-        estudiante = {'nombre': nombre , 'edad' : edad, 'calificaciones' : calificaciones}
+
+        estudiante = {
+            'nombre': nombre ,
+            'edad' : edad,
+            'calificaciones' : calificaciones
+        }
         estudiantes.append(estudiante)
 
 # Función para mostrar la información del estudiante
